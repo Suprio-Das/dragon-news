@@ -1,7 +1,13 @@
+import Header from "../Components/Header";
+
 const HomeLayout = () => {
     return (
         <div>
-            Home Layout
+            <header>
+                <Header></Header>
+            </header>
+            <nav></nav>
+            <main></main>
         </div>
     );
 };
