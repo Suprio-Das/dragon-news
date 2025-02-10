@@ -1,7 +1,7 @@
 const LatestNews = () => {
     return (
         <div>
-            Latest News
+            <p className="bg-[#D72050] inline text-white px-3 py-2">Latest News</p>
         </div>
     );
 };
