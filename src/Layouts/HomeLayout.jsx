@@ -14,7 +14,11 @@ const HomeLayout = () => {
             <nav className="w-11/12 mx-auto my-3">
                 <Navbar></Navbar>
             </nav>
-            <main></main>
+            <main className="w-11/12 mx-auto grid md:grid-cols-12">
+                <aside className="col-span-3">Left Aside</aside>
+                <section className="col-span-6">Main Content</section>
+                <aside className="col-span-3">Right Aside</aside>
+            </main>
         </div>
     );
 };

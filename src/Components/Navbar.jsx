@@ -2,20 +2,6 @@ import { Link } from "react-router-dom";
 import userIcon from '../assets/user.png'
 const Navbar = () => {
     return (
-        // <div className="flex justify-between items-center">
-        //     <div></div>
-        //     <div className="nav space-x-5">
-        //         <Link to="/">Home</Link>
-        //         <Link to="/career">Career</Link>
-        //         <Link to="/about">About</Link>
-        //     </div>
-        //     <div className="flex items-center space-x-5">
-        //         <div>
-        //             <img src={userIcon} alt="" />
-        //         </div>
-        //         <button className="btn bg-[#403F3F] rounded-none px-8 text-white">Login</button>
-        //     </div>
-        // </div>
         <div className="navbar">
             <div className="navbar-start">
                 <div className="dropdown">
