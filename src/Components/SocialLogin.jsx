@@ -5,8 +5,8 @@ const SocialLogin = () => {
         <div>
             <h2 className="font-semibold text-[20px] my-1">Login With</h2>
             <div>
-                <button className="btn my-1 w-full"><FaGoogle /> Login With Google</button>
-                <button className="btn my-1 w-full"><IoLogoGithub /> Login With Github</button>
+                <button className="btn my-1 w-full text-blue-500"><FaGoogle className="text-blue-500" /> Login With Google</button>
+                <button className="btn my-1 w-full"><IoLogoGithub className="text-lg" /> Login With Github</button>
             </div>
         </div>
     );
