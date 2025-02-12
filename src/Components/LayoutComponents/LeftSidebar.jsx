@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { NavLink } from "react-router-dom";
 
 const LeftSidebar = () => {
     const [categories, setCategories] = useState([]);
@@ -11,12 +12,10 @@ const LeftSidebar = () => {
         <div>
             <h2 className="font-semibold text-[#403F3F] text-[20px]">All Category</h2>
             {/* <h2 className="bg-[#E7E7E7] font-semibold py-3 text-center my-2 rounded-sm">National News</h2> */}
-            <div className="flex items-center justify-center my-5">
-                <div className="flex flex-col gap-3">
-                    {
-                        categories.map((category) => <button className="text-left text-[#9F9F9F] hover:cursor-pointer hover:underline" key={category.category_id}>{category.category_name}</button>)
-                    }
-                </div>
+            <div className="flex flex-col items-start max-w-full my-2">
+                {
+                    categories.map((category) => <NavLink to={`/categories/${category.category_id}`} className="text-left w-full text-[#9F9F9F] hover:cursor-pointer hover:bg-[#E7E7E7] px-5 py-3 rounded-sm" key={category.category_id}>{category.category_name}</NavLink>)
+                }
             </div>
         </div>
     );
