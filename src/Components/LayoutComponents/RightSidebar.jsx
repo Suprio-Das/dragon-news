@@ -1,7 +1,9 @@
+import SocialLogin from "../SocialLogin";
+
 const RightSidebar = () => {
     return (
         <div>
-            This is the Right Sidebar.
+            <SocialLogin></SocialLogin>
         </div>
     );
 };
