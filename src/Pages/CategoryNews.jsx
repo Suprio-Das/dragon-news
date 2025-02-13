@@ -8,7 +8,7 @@ const CategoryNews = () => {
             <h2 className="text-[#403F3F] text-[20px] font-semibold">Dragon News Home</h2>
             <div>
                 {
-                    news.map((singleNews) => <NewsCard key={singleNews.category_id} singleNews={singleNews}></NewsCard>)
+                    news.map((singleNews) => <NewsCard key={singleNews._id} singleNews={singleNews}></NewsCard>)
                 }
             </div>
         </div>
