@@ -29,7 +29,7 @@ const Navbar = () => {
                 <div>
                     <img src={userIcon} alt="" />
                 </div>
-                <button className="btn bg-[#403F3F] rounded-none px-8 text-white">Login</button>
+                <Link to="/auth/login" className="btn bg-[#403F3F] rounded-none px-8 text-white">Login</Link>
             </div>
         </div>
     );
