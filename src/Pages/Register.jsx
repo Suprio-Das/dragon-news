@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 
 const Register = () => {
+
     return (
         <div className="min-h-screen flex justify-center items-center -mt-10">
             <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
