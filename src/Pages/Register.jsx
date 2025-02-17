@@ -9,13 +9,13 @@ const Register = () => {
                 <div className="card-body">
                     <form className="fieldset">
                         <label className="fieldset-label text-black font-semibold">Your Name</label>
-                        <input type="text" className="input outline-0 border-0 bg-[#F3F3F3]" placeholder="Your Name Here" />
+                        <input type="text" name="name" className="input outline-0 border-0 bg-[#F3F3F3]" placeholder="Your Name Here" />
                         <label className="fieldset-label text-black font-semibold">Photo URL</label>
-                        <input type="text" className="input outline-0 border-0 bg-[#F3F3F3]" placeholder="Your Name Here" />
+                        <input type="text" name="photo" className="input outline-0 border-0 bg-[#F3F3F3]" placeholder="Your Photo URL Here" />
                         <label className="fieldset-label text-black font-semibold">Email Address</label>
-                        <input type="email" className="input outline-0 border-0 bg-[#F3F3F3]" placeholder="Email" />
+                        <input type="email" name="email" className="input outline-0 border-0 bg-[#F3F3F3]" placeholder="Email" />
                         <label className="fieldset-label text-black font-semibold">Password</label>
-                        <input type="password" className="input outline-0 border-0 bg-[#F3F3F3]" placeholder="Password" />
+                        <input type="password" name="password" className="input outline-0 border-0 bg-[#F3F3F3]" placeholder="Password" />
                         <button className="btn bg-[#403F3F] text-white mt-4">Register</button>
                     </form>
                     <h2 className="text-center text-[#706F6F]">Already have an account? <Link to='/auth/login' className="text-red-500 font-semibold">Login</Link></h2>
