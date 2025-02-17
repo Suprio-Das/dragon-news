@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { AuthContext } from "../Provider/AuthProvider";
 
 const Register = () => {
-    const { createNewUser } = useContext(AuthContext);
+    const { createNewUser, setUser, user } = useContext(AuthContext);
     const handleSubmit = (e) => {
         e.preventDefault();
         const formData = new FormData(e.target);
@@ -15,7 +15,7 @@ const Register = () => {
         createNewUser(email, password)
             .then(result => {
                 const user = result.user;
-                console.log(user);
+                setUser(user);
             })
             .catch(error => {
                 console.log(error.message);
