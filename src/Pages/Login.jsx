@@ -1,9 +1,13 @@
+import { useContext } from "react";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../Provider/AuthProvider";
 
 const Login = () => {
+    const context = useContext(AuthContext);
     return (
         <div className="min-h-screen flex justify-center items-center -mt-10">
             <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+                <h2>{context.test}</h2>
                 <h2 className="text-center pt-5 text-2xl font-semibold">Login your account</h2>
                 <div className="card-body">
                     <form className="fieldset">
