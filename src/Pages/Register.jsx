@@ -16,7 +16,7 @@ const Register = () => {
                         <input type="email" name="email" className="input outline-0 border-0 bg-[#F3F3F3]" placeholder="Email" />
                         <label className="fieldset-label text-black font-semibold">Password</label>
                         <input type="password" name="password" className="input outline-0 border-0 bg-[#F3F3F3]" placeholder="Password" />
-                        <button className="btn bg-[#403F3F] text-white mt-4">Register</button>
+                        <button type="submit" className="btn bg-[#403F3F] text-white mt-4">Register</button>
                     </form>
                     <h2 className="text-center text-[#706F6F]">Already have an account? <Link to='/auth/login' className="text-red-500 font-semibold">Login</Link></h2>
                 </div>
