@@ -1,13 +1,16 @@
 import { Link } from "react-router-dom";
 
 const Register = () => {
-
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        console.log("Form Submitted!");
+    }
     return (
         <div className="min-h-screen flex justify-center items-center -mt-10">
             <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
                 <h2 className="text-center pt-5 text-2xl font-semibold">Register your account</h2>
                 <div className="card-body">
-                    <form className="fieldset">
+                    <form onSubmit={handleSubmit} className="fieldset">
                         <label className="fieldset-label text-black font-semibold">Your Name</label>
                         <input type="text" name="name" className="input outline-0 border-0 bg-[#F3F3F3]" placeholder="Your Name Here" />
                         <label className="fieldset-label text-black font-semibold">Photo URL</label>
