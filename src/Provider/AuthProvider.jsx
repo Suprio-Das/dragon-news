@@ -7,7 +7,7 @@ export const AuthContext = createContext();
 const AuthProvider = ({ children }) => {
     // Creating New User
     const createNewUser = (email, password) => {
-        return createUserWithEmailAndPassword(auth);
+        return createUserWithEmailAndPassword(auth, email, password);
     }
     const authInfo = {
         createNewUser
