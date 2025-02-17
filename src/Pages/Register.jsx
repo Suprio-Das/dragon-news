@@ -3,7 +3,12 @@ import { Link } from "react-router-dom";
 const Register = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log("Form Submitted!");
+        const formData = new FormData(e.target);
+        const name = formData.get("name");
+        const photo = formData.get("photo");
+        const email = formData.get("email");
+        const password = formData.get("password");
+        console.log({ name, photo, email, password });
     }
     return (
         <div className="min-h-screen flex justify-center items-center -mt-10">
