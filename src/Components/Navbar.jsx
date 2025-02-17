@@ -1,6 +1,9 @@
 import { Link } from "react-router-dom";
 import userIcon from '../assets/user.png'
+import { useContext } from "react";
+import { AuthContext } from "../Provider/AuthProvider";
 const Navbar = () => {
+    const { user, logout } = useContext(AuthContext);
     return (
         <div className="navbar">
             <div className="navbar-start">
@@ -29,7 +32,9 @@ const Navbar = () => {
                 <div>
                     <img src={userIcon} alt="" />
                 </div>
-                <Link to="/auth/login" className="btn bg-[#403F3F] rounded-none px-8 text-white">Login</Link>
+                {
+                    user && user?.email ? <button onClick={logout} className="btn bg-[#403F3F] rounded-none px-8 text-white">Logout</button> : <Link to="/auth/login" className="btn bg-[#403F3F] rounded-none px-8 text-white">Login</Link>
+                }
             </div>
         </div>
     );
