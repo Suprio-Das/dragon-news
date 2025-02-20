@@ -1,4 +1,4 @@
-import { createUserWithEmailAndPassword, GoogleAuthProvider, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut } from "firebase/auth";
+import { createUserWithEmailAndPassword, GithubAuthProvider, GoogleAuthProvider, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut } from "firebase/auth";
 import { createContext, useEffect, useState } from "react";
 import { auth } from "../Firebase/Firebase.config";
 
@@ -11,6 +11,11 @@ const AuthProvider = ({ children }) => {
     const googleProvider = new GoogleAuthProvider();
     const signUpWithGoogle = () => {
         return signInWithPopup(auth, googleProvider);
+    }
+    // Creating New User with GitHub
+    const gitProvider = new GithubAuthProvider();
+    const signUpWithGit = () => {
+        return signInWithPopup(auth, gitProvider);
     }
 
     // Creating New User
