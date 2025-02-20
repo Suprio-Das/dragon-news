@@ -1,7 +1,13 @@
+import Header from "../Components/Header";
+import Navbar from "../Components/Navbar";
+
 const NewsDetails = () => {
     return (
-        <div>
-            <h1>News Details Here...</h1>
+        <div className="w-11/12 mx-auto">
+            <header>
+                <Header></Header>
+                <Navbar></Navbar>
+            </header>
         </div>
     );
 };
