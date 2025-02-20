@@ -8,23 +8,21 @@ const NewsDetails = () => {
     const { data } = useLoaderData();
     const singleNewsData = data[0];
     console.log(singleNewsData)
-
-    // Loading Data
-    useEffect(() => {
-        fetch(`https://openapi.programming-hero.com/api/news/${singleNewsData._id}`)
-            .then(res => res.json())
-            .then(data => console.log(data))
-    }, [])
     return (
         <div className="w-11/12 mx-auto">
             <header>
                 <Header></Header>
                 <Navbar></Navbar>
             </header>
-            <main className="grid grid-cols-12 justify-center">
+            <main className="grid grid-cols-12 justify-center gap-5">
                 <div className="col-span-9">
                     <div>
                         <h1 className="font-semibold text-xl text-[#403F3F]">Dragon News</h1>
+                        <div className="shadow-sm p-5 mt-3">
+                            <div>
+                                <img src={singleNewsData.image_url} alt="" />
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div className="col-span-3 font-semibold text-xl text-[#403F3F]">
