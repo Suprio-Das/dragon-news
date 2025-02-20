@@ -43,7 +43,7 @@ const Navbar = () => {
                     <img src={userIcon} alt="" />
                 </div>
                 {
-                    user && user?.email ? <button onClick={handleLogOut} className="btn bg-[#403F3F] rounded-none px-8 text-white">Logout</button> : <Link to="/auth/login" className="btn bg-[#403F3F] rounded-none px-8 text-white">Login</Link>
+                    user ? <button onClick={handleLogOut} className="btn bg-[#403F3F] rounded-none px-8 text-white">Logout</button> : <Link to="/auth/login" className="btn bg-[#403F3F] rounded-none px-8 text-white">Login</Link>
                 }
             </div>
         </div>
