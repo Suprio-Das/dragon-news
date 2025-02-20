@@ -2,6 +2,7 @@ import { useLoaderData } from "react-router-dom";
 import Header from "../Components/Header";
 import Navbar from "../Components/Navbar";
 import { useEffect } from "react";
+import RightSidebar from "../Components/LayoutComponents/RightSidebar";
 
 const NewsDetails = () => {
     const { data } = useLoaderData();
@@ -23,11 +24,11 @@ const NewsDetails = () => {
             <main className="grid grid-cols-12 justify-center">
                 <div className="col-span-9">
                     <div>
-                        <h1>Single News Details</h1>
+                        <h1 className="font-semibold text-xl text-[#403F3F]">Dragon News</h1>
                     </div>
                 </div>
-                <div className="col-span-3">
-                    <h1>Right Sidebar</h1>
+                <div className="col-span-3 font-semibold text-xl text-[#403F3F]">
+                    <RightSidebar></RightSidebar>
                 </div>
             </main>
         </div>
