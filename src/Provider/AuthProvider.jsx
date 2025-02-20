@@ -9,7 +9,6 @@ const AuthProvider = ({ children }) => {
 
     // Creating New User with Google
     const googleProvider = new GoogleAuthProvider();
-
     const signUpWithGoogle = () => {
         return signInWithPopup(auth, googleProvider);
     }
