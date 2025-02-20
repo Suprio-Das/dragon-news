@@ -23,8 +23,9 @@ const Routes = createBrowserRouter([
         ]
     },
     {
-        path: '/news/:id',
-        element: <NewsDetails></NewsDetails>
+        path: '/api/news/:id',
+        element: <NewsDetails></NewsDetails>,
+        loader: ({ params }) => fetch(`https://openapi.programming-hero.com/api/news/${params.id}`)
     },
     {
         path: '/auth',

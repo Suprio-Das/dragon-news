@@ -29,7 +29,7 @@ const NewsCard = ({ singleNews }) => {
             <p className="text-sm text-gray-600 mb-4">
                 {singleNews.details.slice(0, 150)}...
             </p>
-            <Link to={`/news/${singleNews._id}}`} className="text-orange-500 font-semibold hover:underline">Read More</Link>
+            <Link to={`/api/news/${singleNews._id}`} className="text-orange-500 font-semibold hover:underline">Read More</Link>
             <div className="flex items-center justify-between mt-4 text-sm text-gray-500">
                 <div className="flex items-center gap-1">
                     {[...Array(4)].map((_, i) => (
