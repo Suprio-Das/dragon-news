@@ -23,6 +23,7 @@ const NewsDetails = () => {
                                 <img src={singleNewsData.image_url} alt="" />
                             </div>
                             <h1 className="text-[25px] text-[#403F3F] font-semibold my-2">{singleNewsData.title}</h1>
+                            <p className="text-base text-[#403F3F] leading-6 text-justify">{singleNewsData.details}</p>
                         </div>
                     </div>
                 </div>
