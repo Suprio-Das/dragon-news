@@ -1,10 +1,11 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { Link, Navigate, useNavigate } from "react-router-dom";
 import { AuthContext } from "../Provider/AuthProvider";
 import Loader from "../Components/Loader";
 
 const Login = () => {
     const { signInUser, loading } = useContext(AuthContext);
+    const [error, setError] = useState(false);
     if (loading) {
         <Loader></Loader>
     }
@@ -17,15 +18,19 @@ const Login = () => {
         signInUser(email, password)
             .then(() => {
                 navigate('/')
+                setError('');
             })
             .catch(error => {
-                console.log(error.message);
+                setError(error.message);
             })
     }
     return (
         <div className="min-h-screen flex justify-center items-center -mt-10">
             <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
                 <h2 className="text-center pt-5 text-2xl font-semibold">Login your account</h2>
+                {
+                    error && <p className="text-center text-sm mt-5 bg-base-200 w-11/12 p-2 mx-auto border border-red-300 rounded-md text-red-500">Invalid Password or Email!</p>
+                }
                 <div className="card-body">
                     <form onSubmit={handleLogin} className="fieldset">
                         <label className="fieldset-label text-black font-semibold">Email Address</label>
