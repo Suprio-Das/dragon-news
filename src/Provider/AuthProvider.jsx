@@ -1,4 +1,4 @@
-import { createUserWithEmailAndPassword, GithubAuthProvider, GoogleAuthProvider, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut } from "firebase/auth";
+import { createUserWithEmailAndPassword, GithubAuthProvider, GoogleAuthProvider, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut, updateProfile } from "firebase/auth";
 import { createContext, useEffect, useState } from "react";
 import { auth } from "../Firebase/Firebase.config";
 
@@ -25,6 +25,11 @@ const AuthProvider = ({ children }) => {
         return createUserWithEmailAndPassword(auth, email, password);
     }
 
+    // Update user profile
+    const updateUserProfile = (updatedProfileInfo) => {
+        return updateProfile(auth.currentUser, updatedProfileInfo);
+    }
+
     const logout = () => {
         setLoading(true);
         return signOut(auth);
@@ -39,6 +44,7 @@ const AuthProvider = ({ children }) => {
         const unSubscribe = onAuthStateChanged(auth, currentUser => {
             setUser(currentUser);
             setLoading(false);
+            console.log(currentUser);
         })
         return () => {
             unSubscribe();
@@ -53,7 +59,8 @@ const AuthProvider = ({ children }) => {
         logout,
         setUser,
         user,
-        loading
+        loading,
+        updateUserProfile
     }
     return (
         <AuthContext.Provider value={authInfo}>
