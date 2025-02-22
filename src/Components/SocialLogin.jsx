@@ -6,21 +6,9 @@ const SocialLogin = () => {
     const { signUpWithGoogle, signUpWithGit } = useContext(AuthContext);
     const handleGoogleLogin = () => {
         signUpWithGoogle()
-            .then(result => {
-                console.log(`Google Signin complete, ${result.user}`);
-            })
-            .catch(error =>
-                console.log(error.message)
-            )
     }
     const handleGitLogin = () => {
         signUpWithGit()
-            .then(result => {
-                console.log(`Git Signin complete, ${result.user}`);
-            })
-            .catch(error =>
-                console.log(error.message)
-            )
     }
     return (
         <div>

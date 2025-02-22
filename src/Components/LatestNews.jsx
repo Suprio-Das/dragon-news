@@ -4,7 +4,6 @@ import { Link, useLoaderData } from "react-router-dom";
 const LatestNews = () => {
     const categoryOneData = useLoaderData();
     const data = categoryOneData.data;
-    console.log(data);
     return (
         <div className="flex items-center gap-x-5 bg-[#F3F3F3] p-3">
             <p className="bg-[#D72050] text-white px-4 py-2 text-nowrap">Latest News</p>

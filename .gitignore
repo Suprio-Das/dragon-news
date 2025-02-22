@@ -23,3 +23,11 @@ dist-ssr
 *.sln
 *.sw?
 firebase.config.js
+# Firebase
+.firebase/
+dist/
+functions/node_modules/
+
+# Node.js
+node_modules/
+npm-debug.log

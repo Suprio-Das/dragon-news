@@ -10,9 +10,6 @@ const Navbar = () => {
             .then(() => {
                 navigate('/auth/login');
             })
-            .catch(error => {
-                console.log(error.message);
-            })
     }
     return (
         <div className="navbar">

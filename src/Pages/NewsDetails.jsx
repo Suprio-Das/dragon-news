@@ -7,7 +7,6 @@ import RightSidebar from "../Components/LayoutComponents/RightSidebar";
 const NewsDetails = () => {
     const { data } = useLoaderData();
     const singleNewsData = data[0];
-    console.log(singleNewsData)
     return (
         <div className="w-11/12 mx-auto my-3">
             <header>
