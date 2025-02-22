@@ -1,9 +1,13 @@
 import { useContext } from "react";
 import { Link, Navigate, useNavigate } from "react-router-dom";
 import { AuthContext } from "../Provider/AuthProvider";
+import Loader from "../Components/Loader";
 
 const Login = () => {
-    const { signInUser } = useContext(AuthContext);
+    const { signInUser, loading } = useContext(AuthContext);
+    if (loading) {
+        <Loader></Loader>
+    }
     const navigate = useNavigate();
     const handleLogin = (e) => {
         e.preventDefault();

@@ -1,9 +1,13 @@
 import { useContext } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../Provider/AuthProvider";
+import Loader from "../Components/Loader";
 
 const Register = () => {
-    const { createNewUser, setUser, user } = useContext(AuthContext);
+    const { createNewUser, setUser, loading } = useContext(AuthContext);
+    if (loading) {
+        <Loader></Loader>
+    }
     const handleSubmit = (e) => {
         e.preventDefault();
         const formData = new FormData(e.target);
