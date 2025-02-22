@@ -40,7 +40,11 @@ const Navbar = () => {
             </div>
             <div className="navbar-end space-x-2">
                 <div>
-                    <img src={userIcon} alt="" />
+                    {
+                        user ? <div>
+                            <img src={user.photoURL} alt="" className="w-11 h-11 rounded-full border-2 border-green-500" />
+                        </div> : <img src={userIcon} alt="" />
+                    }
                 </div>
                 {
                     user ? <button onClick={handleLogOut} className="btn bg-[#403F3F] rounded-none px-8 text-white">Logout</button> : <Link to="/auth/login" className="btn bg-[#403F3F] rounded-none px-8 text-white">Login</Link>
