@@ -26,7 +26,7 @@ Dragon News is a dynamic news platform built with React that provides category-w
 - **Tailwind CSS**: Provides a responsive and modern UI.
 - **News API**: Fetches real-time news updates.
 
-## Live Link: [Dragon News](https://dragon-news-liard.vercel.app/category/01)
+## Live Link: [Dragon News](https://dragon-news-e5189.web.app/category/01)
 
 ## Getting Started
 
